@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel site/index.html",
-    "build-prd": "parcel build site/index.html && tsc",
-    "deploy": "npm run build-prd && cdk deploy",
-    "lint": "eslint --ext js,ts infrastructure/"
+    "build": "parcel build site/index.html && tsc",
+    "deploy": "npm run build && cdk deploy",
+    "lint": "eslint --ext js,ts infrastructure/",
+    "commitlint": "commitlint -f 4ec50c9",
+    "standards": "npm run lint && npm run commitlint"
   },
   "keywords": [],
   "author": "Jim Jenkins <jim@creativepenguin.net",
@@ -26,7 +28,6 @@
   },
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
-    "@commitlint/travis-cli": "8.3.5",
     "@creativepenguin/standards": "1.0.0-rc.1",
     "@types/config": "0.0.36",
     "@types/node": "13.7.1",
