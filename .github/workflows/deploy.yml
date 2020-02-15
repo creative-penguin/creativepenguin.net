@@ -1,0 +1,25 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+   deploy:
+      runs-on: ubuntu-latest
+      steps:
+         - uses: actions/checkout@v2
+           with:
+              # We need all the commits for commitlint to work
+              fetch-depth: 0
+         - name: Use Node.js 12.*
+           uses: actions/setup-node@v1
+           with:
+              node-version: 12.*
+         - name: Package Install
+           run: npm ci
+         - name: Standards
+           run: npm run standards
+         - name: Build and deploy
+           run: npm run deploy
