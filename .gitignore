@@ -1,0 +1,12 @@
+dist
+infraDist
+.cache
+node_modules
+
+config/**/*
+!config/default.json
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+cdk.context.json

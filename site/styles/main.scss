@@ -1,0 +1,24 @@
+@import './bulma';
+
+html {
+   font-size: 100%;
+   background-color: #ccc;
+   &,
+   * {
+      box-sizing: border-box;
+   }
+}
+
+.hero {
+   .hero-logo {
+      $padding: nth($section-padding, 1) * 2;
+      max-height: calc(100vh - #{$padding});
+   }
+}
+
+.resume {
+   background: linear-gradient(0deg, #444, #555);
+   h2.title {
+      margin-bottom: 3rem;
+   }
+}
