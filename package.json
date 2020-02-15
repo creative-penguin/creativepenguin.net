@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "parcel site/index.html",
     "build-prd": "parcel build site/index.html && tsc",
-    "deploy": "npm run build-prd && cdk deploy"
+    "deploy": "npm run build-prd && cdk deploy",
+    "lint": "eslint --ext js,ts infrastructure/"
   },
   "keywords": [],
   "author": "Jim Jenkins <jim@creativepenguin.net",
@@ -24,10 +25,14 @@
     "source-map-support": "0.5.16"
   },
   "devDependencies": {
+    "@commitlint/cli": "8.3.5",
+    "@commitlint/travis-cli": "8.3.5",
+    "@creativepenguin/standards": "1.0.0-rc.1",
     "@types/config": "0.0.36",
     "@types/node": "13.7.1",
     "aws-cdk": "1.24.0",
     "config": "3.2.5",
+    "eslint": "6.8.0",
     "node-sass": "4.13.1",
     "parcel-bundler": "1.12.4",
     "sass": "^1.25.0",

@@ -1,5 +1,5 @@
 import * as cdk from '@aws-cdk/core';
-import { Bucket, BucketAccessControl, } from '@aws-cdk/aws-s3';
+import { Bucket, BucketAccessControl } from '@aws-cdk/aws-s3';
 import { BucketDeployment, Source } from '@aws-cdk/aws-s3-deployment';
 import { CloudFrontWebDistribution } from '@aws-cdk/aws-cloudfront';
 import { HostedZone, AddressRecordTarget, ARecord, IHostedZone } from '@aws-cdk/aws-route53';
@@ -12,7 +12,7 @@ export interface StaticSiteProps extends cdk.StackProps {
 }
 
 export class StaticSite extends cdk.Stack {
-   constructor(scope: cdk.Construct, id: string, props?: StaticSiteProps) {
+   public constructor(scope: cdk.Construct, id: string, props?: StaticSiteProps) {
       super(scope, id, props);
 
       props = props || {};
@@ -87,7 +87,7 @@ export class StaticSite extends cdk.Stack {
    }
 }
 
-function getAliases(subdomains: string[], domain: string) {
+function getAliases(subdomains: string[], domain: string): string[] {
    return subdomains.map((subdomain) => {
       let alias = '';
 
