@@ -1,12 +1,17 @@
 @import './bulma';
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
 
 html {
-   font-size: 100%;
    background-color: #ccc;
    &,
    * {
       box-sizing: border-box;
    }
+}
+
+body {
+   font-family: 'Comfortaa', sans-serif;
+   font-size: 100%;
 }
 
 .hero {
