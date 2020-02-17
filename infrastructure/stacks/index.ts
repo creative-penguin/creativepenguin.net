@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import cdk = require('@aws-cdk/core');
-import { StaticSite, StaticSiteProps } from './static-site';
+import { StaticSite, StaticSiteProps } from '@creativepenguin/cdk-static-site';
 import config = require('config');
 
 
