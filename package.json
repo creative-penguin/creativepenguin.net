@@ -17,7 +17,7 @@
   "dependencies": {
     "@aws-cdk/core": "1.24.0",
     "@creativepenguin/cdk-static-site": "0.2.0",
-    "bulma": "0.8.0",
+    "bulma": "0.9.4",
     "source-map-support": "0.5.16"
   },
   "devDependencies": {
@@ -25,13 +25,12 @@
     "@creativepenguin/standards": "1.0.0-rc.1",
     "@types/config": "0.0.36",
     "@types/node": "13.7.1",
-    "aws-cdk": "1.24.0",
+    "aws-cdk": "1.172.0",
     "config": "3.2.5",
     "eslint": "6.8.0",
-    "node-sass": "4.13.1",
-    "parcel-bundler": "1.12.4",
-    "parcel-plugin-static-files-copy": "2.3.1",
-    "sass": "^1.25.0",
+    "parcel-bundler": "1.12.5",
+    "parcel-plugin-static-files-copy": "2.6.0",
+    "sass": "1.54.9",
     "ts-node": "8.6.2",
     "typescript": "3.7.5"
   },

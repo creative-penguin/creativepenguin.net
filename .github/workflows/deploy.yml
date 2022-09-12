@@ -13,10 +13,10 @@ jobs:
            with:
               # We need all the commits for commitlint to work
               fetch-depth: 0
-         - name: Use Node.js 12.*
+         - name: Use Node.js 16.*
            uses: actions/setup-node@v1
            with:
-              node-version: 12.*
+              node-version: 16.*
          - name: Package Install
            run: npm ci
          - name: Standards
